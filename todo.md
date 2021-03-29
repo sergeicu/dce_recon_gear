@@ -16,6 +16,18 @@ CURRENT:
 NEW - option A: 
 ```
     Args: 
+    Args:
+        NAME (str): name of patient in the First_Last format
+        CSV (str): change paths to related w.r.t. docker / gear container (must point to: output/ directory by convention of flywheel gears) 
+        OUTPUTDIR (str): deprecate - this should be written to 'outputs' always. Outputs should be mapped to wherever docker is pointing to.
+        reconResultsSCANdir (str): must point to /output inside the docker / gear container. Ideally we need to remove this and make into single reference file instead. 
+        
+        
+```
+
+NEW - option B: 
+```
+    Args: 
         NAME (str): unload this to .json file 
         SEQ_POINTS (str): unload to .json file specify how many input files matlab binary shall expect 
         TIME_POINTS (STR): unload to .json file - specify time points from .csv file
@@ -28,7 +40,7 @@ NEW - option A:
         
         
         
-NEW - option B: 
+NEW - option C: 
 ```
     Args: 
         NAME (str): unload this to .json file 
