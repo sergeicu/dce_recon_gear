@@ -1,0 +1,55 @@
+{
+  "name": "dce_recon",
+  "label": "tbc",
+  "description": "tbc",
+  "maintainer": "Serge Vasylechko <serge.vasylechko@childrens.harvard.edu>",
+  "author": "tbc",
+  "url": "tbc",
+  "source": "TBC github link",
+  "license": "Other",
+  "flywheel": {
+    "suite": "dce_recon"
+  },
+  "version": "0.1",
+  "custom": {
+    "docker-image": "?"
+  },
+  "inputs": {
+    "DAT_FILE": {
+      "description": "path to raw data files",
+      "base": "file",
+      "type": {
+        "enum": [
+          "?"
+        ]
+      }
+    }
+    "NII_FILE": {
+      "description": "path to scanner reconstructed nifti file.  e.g. inside our code the path is currently written as: referenceNii{ss} = strcat(reconResultsSCANdir,patientName{ss},'_seq1/reconSCAN_T0.nii')",
+      "base": "file",
+      "type": {
+        "enum": [
+          "?"
+        ]
+      }
+    }
+      
+  },
+  "config": {
+    "NAME": {
+      "description": "Patient Name in First_Last format",
+      "default": "none",
+      "type": "string"
+    }
+    "MRN": {
+      "description": "Patient MRN",
+      "default": "none",
+      "type": "string"
+    }      
+    "TIMEPOINTS": {
+      "description": "Number of timepoints for each of the input files",
+      "default": "none",
+      "type": "string"
+    }      
+  }
+}
